@@ -64,6 +64,7 @@ export default function App() {
 
   return (
     <>
+      <h1>Toi la bank</h1>
       <p>Todo App TypeScript</p>
       <CreateNewTodo
         onAddingBtnClick={onAddingBtnClick}
