@@ -21,15 +21,18 @@ export const CreateNewTodo = ({
           size="small"
           value={newTodoString}
           onChange={onNewTodoChange}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              onAddingBtnClick();
+            }
+          }}
         />
 
         <Button variant="contained" onClick={onAddingBtnClick}>
           Thêm
         </Button>
       </div>
-      <div style={{ color: "red" }}>
-        {errorInput}
-      </div>
+      <div style={{ color: "red" }}>{errorInput}</div>
     </div>
   );
 };
