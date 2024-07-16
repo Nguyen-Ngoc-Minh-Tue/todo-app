@@ -37,8 +37,10 @@ export default function App() {
       name: newTodoString,
       isCompleted: false,
     };
+    const newTodoList = [newTodoItem, ...todoList];
+    newTodoList.sort((a, b) => a.name.localeCompare(b.name))
 
-    setTodoList([newTodoItem, ...todoList]);
+    setTodoList(newTodoList);
     setNewTodoString("");
   };
 
